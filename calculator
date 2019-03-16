@@ -1,29 +1,42 @@
-def add(a,b):
-    return a+b
-def sub(a,b):
-    return a-b
-def mul(a,b):
-    return a*b
-def div(a,b):
-    return a/b
-print("Select operation")
-print("1.Addition")
-print("2.Subtraction")
-print("3.Multiplication")
-print("4.Division")
-c=input("Enter choice")
-x=int(input("Enter the first number"))
-y=int(input("Enter the second number"))
-if c=='1':
-    print(add(x,y))
-elif c=='2':
-    print(sub(x,y))
-elif c=='3':
-    print(mul(x,y))
-elif c=='4':
-    if y==0:
-        print("Invalid!Enter the correct value")
-        
-    else:
-        print(div(x,y))
+#include<stdio.h>
+int main()
+{
+    int x,y,z,choice;
+    printf("Enter x\n");
+    scanf("%d",&x);
+    printf("Enter y\n");
+    scanf("%d",&y);
+    printf("1.Add\n2.Sub\n3.mul\n4.div\n");
+    printf("Enter your choice\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    case 1:
+        z=x+y;
+        printf("%d",z);
+        break;
+    case 2:
+        z=x-y;
+        printf("%d",z);
+        break;
+    case 3:
+        z=x*y;
+        printf("%d",z);
+        break;
+    case 4:
+        if (y==0)
+        {
+            printf("Invalid");
+            break;
+        }
+        else
+        {
+            z=x/y;
+            printf("%d",&z);
+            break;
+        }
+    default:
+        printf("Invalid");
 
+    }
+}
