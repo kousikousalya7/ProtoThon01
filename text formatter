@@ -1,0 +1,26 @@
+s=input("Enter the string")
+s=s.split()
+a=[]
+print("1.All caps")
+print("2.Small caps")
+print("3.Title Case")
+print("4.Start Case")
+b=int(input("Enter Choice"))
+if b==1:
+    for i in s:
+        print(i.upper(),end=" ")
+if b==2:
+    for i in s:
+        print(i,end=" ")
+if b==3:
+    for i in s:
+        print(i.capitalize(),end=" ")
+if b==4:
+    c=0
+    for i in s:
+        if c==0:
+            print(i[0].upper(),end="")
+            print(i[1:],end=" ")
+            c=c+1
+        else:
+            print(i,end=" ")
